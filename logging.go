@@ -1,10 +1,11 @@
-package gcp_logging_easycall
+package go_gcp_logging_easycall
 
 import (
 	"context"
 	"log"
 
 	"cloud.google.com/go/logging"
+	"google.golang.org/genproto/googleapis/api/monitoredres"
 )
 
 type Logger struct {
@@ -20,7 +21,7 @@ type Logger struct {
 	SessionId    string      `json:"sessid"`
 }
 
-func Log(project string, loggerName string, message interface{}, severity string) {
+func Log(project string, loggerName string, message interface{}, severity string, resourceName string, resourceLabels map[string]string) {
 	var severityTag logging.Severity
 
 	ctx := context.Background()
@@ -54,5 +55,9 @@ func Log(project string, loggerName string, message interface{}, severity string
 	client.Logger(loggerName).Log(logging.Entry{
 		Payload:  message,
 		Severity: severityTag,
+		Resource: &monitoredres.MonitoredResource{
+			Type:   resourceName,
+			Labels: resourceLabels,
+		},
 	})
 }
