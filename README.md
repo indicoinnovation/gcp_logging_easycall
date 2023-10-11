@@ -21,14 +21,14 @@ This Library does this with google cloud logging, allowing users just call a fun
 ## Install
 Go version 1.14+
 ```
-go get github.com/INDICO-INNOVATION/gcp_logging_easycall
+go get github.com/indicoinnovation/gcp_logging_easycall
 ```
 
 ##Example
 
 ```
 import (
-    gcpLogging "github.com/INDICO-INNOVATION/gcp_logging_easycall"
+    gcpLogging "github.com/indicoinnovation/gcp_logging_easycall"
 )
 
 gcpProjectName := "your google cloud project"
@@ -56,7 +56,7 @@ See [these docs][pkg-url].
 ## License
 [GNU General Public License v3.0](LICENSE)
 
-[build-url]: https://github.com/INDICO-INNOVATION/gcp_logging_easycall/actions
-[pkg-img]: https://pkg.go.dev/badge/INDICO-INNOVATION/gcp_logging_easycall
-[pkg-url]: https://pkg.go.dev/github.com/INDICO-INNOVATION/gcp_logging_easycall
-[version-url]: https://github.com/INDICO-INNOVATION/gcp_logging_easycall/releases
+[build-url]: https://github.com/indicoinnovation/gcp_logging_easycall/actions
+[pkg-img]: https://pkg.go.dev/badge/indicoinnovation/gcp_logging_easycall
+[pkg-url]: https://pkg.go.dev/github.com/indicoinnovation/gcp_logging_easycall
+[version-url]: https://github.com/indicoinnovation/gcp_logging_easycall/releases
