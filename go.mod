@@ -1,4 +1,4 @@
-module github.com/INDICO-INNOVATION/gcp_logging_easycall
+module github.com/indicoinnovation/gcp_logging_easycall
 
 go 1.18
 
